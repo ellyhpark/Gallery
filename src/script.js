@@ -601,7 +601,7 @@ function checkIntersection() {
     if (intersects.length > 0) {
         const selected = intersects[0].object;
 
-        if (selected.name === 'left-arrow') {
+        if (selected.name === 'left-arrow' && selected.material.opacity === 1) {
             let startTime = -1;
             const duration = 1000; // 1000 milliseconds = 1 second
             const startRotation = wheel.rotation.y;
@@ -622,7 +622,7 @@ function checkIntersection() {
                 closeMoreInfo(moreInfo);
             }
         }
-        else if (selected.name === 'right-arrow') {
+        else if (selected.name === 'right-arrow' && selected.material.opacity === 1) {
             let startTime = -1;
             const duration = 1000;
             const startRotation = wheel.rotation.y;
@@ -643,7 +643,7 @@ function checkIntersection() {
                 closeMoreInfo(moreInfo);
             }
         }
-        else if (selected.name === 'more-info') {
+        else if (selected.name === 'more-info' && selected.material.opacity === 1) {
             // selected.material.map = current material's texture
 
             // user wants to see more info about the artwork
